@@ -3,15 +3,14 @@ $(document).ready(function() {
  function weatherURLWithSearchTerm(searchTerm) {
         var apiKey = '1dbc470097a956c9c8ed70c45560e0d0';
         var zipcode = 11201;
-        varcountrycode="us";
-        var url = "api.openweathermap.org/data/2.5/weather?zip={zipcode}{countrycode}";
+        var countrycode="us";
+        var url = "https://api.openweathermap.org/data/2.5/weather?zip=" + zipcode + ',' + countrycode + "&units=imperial&APPID=1dbc470097a956c9c8ed70c45560e0d0";
         return url;
     }
-    function appendImageToBody(weatherURL) {
+    function appendWeatherToBody(weatherURL) {
         // write a function that will append an <img> to the body with the
         // URL provided in the parameters
-        $('.results').append();
-       
+        $('.results').append(weatherURL);
     }
     function callWeatherAPIWithSearchTerm(searchTerm) {
         var url = weatherURLWithSearchTerm(searchTerm);
@@ -21,8 +20,8 @@ $(document).ready(function() {
             method: "GET",
             success: function(response) {
                 //console.log(response)
-                var weather_url = response.data[0].main.temp.url;
-                console.log(weather_url);
+                var weather_url = response.main.temp;
+                //console.log(weather_url);
                 appendWeatherToBody(weather_url);
             },
         });
@@ -30,7 +29,7 @@ $(document).ready(function() {
     $("#button").click(function() {
         var searchTerm = $('#input').val();
         clearList();
-        weatherURLWithSearchTerm(searchTerm);
+        callWeatherAPIWithSearchTerm();
     });
     $("#clear").click(function() {
         $(".results").empty();
