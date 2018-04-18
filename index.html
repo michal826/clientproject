@@ -3,40 +3,41 @@
 
 <head>
     <title>Michal's Weather App</title>
-    <i class="wi wi-night-sleet"></i> s
+   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="js/script.js" async></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link type="text/css" rel="stylesheet" href="style.css" />
+  <script src="script.js" async></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">YourCaster</a>
-                <img id="icon" src="https://happytrailz.io/assets/ui/images/loading_sun.gif">
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">YourCaster</a>
+        <img class="">
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="col-sm-3 col-md-3 pull-right">
+          <div class="navbar-form" role="search">
+            <div class="input-group">
+              <input id="input" type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+              <div class="input-group-btn">
+                <button id="button" class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                <button id="clear" class="btn btn-default" type="submit"><span class="glyphicon glyphicon-trash"></span></button>
+              </div>
             </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <div class="col-sm-3 col-md-3 pull-right">
-                    <div class="navbar-form" role="search">
-                        <div class="input-group">
-                            <input id="input" type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
-                            <div class="input-group-btn">
-                                <button id="button" class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
-                                <button id="clear" class="btn btn-default" type="submit"><span class="glyphicon glyphicon-"></span></button>
-                                <button id="" class="btn btn-default" data-toggle="modal" data-target="#exampleModal" type="submit"><span class="glyphicon glyphicon-"></span></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-        <!-- /.container -->
-    </nav>
-
-</body>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+  </nav>
+<center>
+        <div class="results"> </div>
+      </center>
 
 </html>

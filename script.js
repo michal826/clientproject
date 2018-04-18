@@ -1,18 +1,19 @@
 $(document).ready(function() {
-    function weatherURLWithSearchTerm(searchTerm) {
 
-        var url = "api.openweathermap.org/data/2.5/weather?q=" + searchTerm;
+ function weatherURLWithSearchTerm(searchTerm) {
+        var apiKey = '1dbc470097a956c9c8ed70c45560e0d0';
+        var zipcode = 11201;
+        varcountrycode="us";
+        var url = "api.openweathermap.org/data/2.5/weather?zip={zipcode}{countrycode}";
         return url;
     }
-
-    function appendForecastToBody(srcURL) {
+    function appendImageToBody(weatherURL) {
         // write a function that will append an <img> to the body with the
         // URL provided in the parameters
-        $('.results').append('<img src=' + srcURL + '>');
+        $('.results').append();
        
     }
-
-    function callLocationWithSearchTerm(searchTerm) {
+    function callWeatherAPIWithSearchTerm(searchTerm) {
         var url = weatherURLWithSearchTerm(searchTerm);
         console.log(url);
         $.ajax({
@@ -20,14 +21,12 @@ $(document).ready(function() {
             method: "GET",
             success: function(response) {
                 //console.log(response)
-                var weather = response.data[0].original.url;
-                console.log(weather);
-                appendFarecastToBody(weather);
+                var weather_url = response.data[0].main.temp.url;
+                console.log(weather_url);
+                appendWeatherToBody(weather_url);
             },
         });
     }
-
-    //Add a click handler beloe to call the function when the button is clicked
     $("#button").click(function() {
         var searchTerm = $('#input').val();
         clearList();
@@ -36,4 +35,8 @@ $(document).ready(function() {
     $("#clear").click(function() {
         $(".results").empty();
     });
+    function clearList() {
+        $('.reults').empty();
+     
+    }
 });
