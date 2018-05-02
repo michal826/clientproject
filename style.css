@@ -2,8 +2,23 @@
     height:50px;
 }
 .results{
+    padding-top: 20px;
     font-size:40px;
+    font-family:'Gothic A1';
 }
 body {
-    padding-top: 200px;
+    padding-top: 150px;
+}
+.w3-container w3-center w3-animate-bottom {
+    font-family:"Gugi";
+    font-size:45px;
+    margin:auto;
+    font-family:'Gothic A1';
+}
+.navbar-brand {
+    font-family:"Gugi";
+}
+.time {
+    font-size:30px;
+     font-family:'Gothic A1';
 }

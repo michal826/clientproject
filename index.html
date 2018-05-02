@@ -3,21 +3,24 @@
 
 <head>
   <title>Michal's Weather App</title>
-
+  <link rel="icon" href="//ssl.gstatic.com/onebox/weather/64/partly_cloudy.png">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src="script.js" async></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link type="text/css" rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Gothic+A1" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">       
 </head>
 
 <body>
   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
       <div class="navbar-header">
+        <img id="icon" src="//ssl.gstatic.com/onebox/weather/64/partly_cloudy.png">
         <a class="navbar-brand" href="#">YourCaster</a>
-        <img class="">
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <div class="col-sm-3 col-md-3 pull-right">
@@ -38,10 +41,17 @@
   </nav>
   
   
-      <center>
+      
+        <div class="w3-container w3-center w3-animate-bottom">
+          <h1>Welcome to YourCaster</h1>
+          <p>To Begin Type in your Zipcode in the top right</p>
+        </div>
+        
+        <center>
         <div class="results"></div>
+        <div class="time"></div>
       </center>
-    
-    
+      
+
 </body>
 </html>
