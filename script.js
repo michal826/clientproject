@@ -32,12 +32,10 @@ $(document).ready(function() {
       var time = new Date();
       var hours = time.getHours();
       var minutes = time.getMinutes();
-
-      // Display a zero before hours/minutes if below 10
       if (hours < 10) {
-        $('.time').html(minutes < 10 ? '0' + hours + ':0' + minutes : '0' + hours + ':' + minutes + " PM");
+        $('.time').html(minutes < 10 ? '0' + hours + ':0' + minutes : '0' + hours + ':' + minutes + " AM");
       } else {
-        $('.time').html(minutes < 10 ? hours + ':0' + minutes : hours + ':' + minutes + " AM");
+        $('.time').html(minutes < 10 ? hours + ':0' + minutes : hours + ':' + minutes + " PM");
       }
     }
     $("#button").click(function() {
@@ -45,13 +43,15 @@ $(document).ready(function() {
         clearList();
         callWeatherAPIWithSearchTerm(searchTerm);
         $(".time").append(showTime);
+       
+    });
+    $("#tech").click(function(){
+        var techzip = 11201;
+    
+        callWeatherAPIWithSearchTerm(searchTerm);
     });
     $("#clear").click(function() {
         $(".results").empty();
         
     });
-    function clearList() {
-        $('.reults').empty();
-       
-    }
     });

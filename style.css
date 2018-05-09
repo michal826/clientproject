@@ -22,3 +22,8 @@ body {
     font-size:30px;
      font-family:'Gothic A1';
 }
+#pano {
+        float: left;
+        height: 300px;
+        width: 100%;
+      }
