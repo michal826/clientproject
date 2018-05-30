@@ -27,3 +27,7 @@ body {
         height: 300px;
         width: 100%;
       }
+#pics {
+    height:200px;
+    margin: auto;
+}

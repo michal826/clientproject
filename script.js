@@ -10,7 +10,8 @@ $(document).ready(function() {
     function appendWeatherToBody(weatherURL) {
         // write a function that will append an <img> to the body with the
         // URL provided in the parameters
-        $('.results').append('<p> It is Currently ' + weatherURL + ' Degrees Outside</p>');
+        $('.results').html('<p> It is Currently ' + weatherURL + ' Degrees Outside</p>');
+        $('.outside').html('<p>It is ' + outside_view + ' Outside</p>');
     }
     function callWeatherAPIWithSearchTerm(searchTerm) {
         var url = weatherURLWithSearchTerm(searchTerm);
@@ -21,9 +22,9 @@ $(document).ready(function() {
             success: function(response) {
                 //console.log(response)
                 var weather_url = response.list[0].main.temp;
-
-     
+                var outside_view = response.list[0].weather.main;
                 appendWeatherToBody(weather_url);
+                appendWeatherToBody(outside_view);
             },
             
         });
@@ -32,6 +33,8 @@ $(document).ready(function() {
       var time = new Date();
       var hours = time.getHours();
       var minutes = time.getMinutes();
+
+      // Display a zero before hours/minutes if below 10
       if (hours < 10) {
         $('.time').html(minutes < 10 ? '0' + hours + ':0' + minutes : '0' + hours + ':' + minutes + " AM");
       } else {
@@ -42,16 +45,15 @@ $(document).ready(function() {
         var searchTerm = $('#input').val();
         clearList();
         callWeatherAPIWithSearchTerm(searchTerm);
+        appendWeatherToBody(outside_view);
         $(".time").append(showTime);
-       
-    });
-    $("#tech").click(function(){
-        var techzip = 11201;
-    
-        callWeatherAPIWithSearchTerm(searchTerm);
     });
     $("#clear").click(function() {
         $(".results").empty();
         
     });
+    function clearList() {
+        $('.reults').empty();
+       
+    }
     });

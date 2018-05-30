@@ -51,16 +51,40 @@
         
         <center>
         <div class="results"></div>
+        <div class="outside"></div>
         <div class="time"></div>
-        <div class="image"></div>
       </center>
       <center>
         <div class="w3-container w3-center w3-animate-bottom">
         <p>Try Out these ZipCodes:</p>
-          <li><a href="">11201</a></li>
-          <li><a href="">73301</a></li>
-          <li><a href="">32704</a></li>
+          <li>11201</li>
+          <li>73301</li>
+          <li>32704</li>
       </center>
       </div>
+      <center><p>Try It Out On your Phone:</p></center>
+        <center><img id="pics" src="https://cdn3.iconfinder.com/data/icons/weather-and-forecast/51/Weather_icons_grey-03-512.png" data-toggle="modal" data-target="#exampleModal"></center>
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel"></h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                        </div>
+                        <div class="modal-body">
+                            <center>
+                                <p>Just Scan The Picture </p>
+                            </center>
+                            <center><img src="snapcode.png" class=" mg-responsive" style="height:200px; width:200px;"></center>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 </body>
 </html>
